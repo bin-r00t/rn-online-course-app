@@ -6,12 +6,6 @@ export default function RootLayout() {
     screenOptions={{
       headerShown: false
     }}>
-    {/* <Stack.Screen name="index"
-      options={{
-        headerRight: () => <LoginButton />,
-      }}
-    />
-    <Stack.Screen name="details" /> */}
     <Stack.Screen name="(tabs)" />
   </Stack>
 }
