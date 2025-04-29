@@ -1,23 +1,17 @@
 import { Stack } from "expo-router";
-import LoginButton from "@/components/ui/LoginButton";
+import "../assets/styles/global.css"
 
 export default function RootLayout() {
   return <Stack
     screenOptions={{
-      headerStyle: {
-        backgroundColor: '#f4511e',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+      headerShown: false
     }}>
-    <Stack.Screen name="index"
+    {/* <Stack.Screen name="index"
       options={{
         headerRight: () => <LoginButton />,
       }}
     />
-    <Stack.Screen name="details" />
-    <Stack.Screen name="login" />
+    <Stack.Screen name="details" /> */}
+    <Stack.Screen name="(tabs)" />
   </Stack>
 }

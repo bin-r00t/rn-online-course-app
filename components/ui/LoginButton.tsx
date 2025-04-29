@@ -1,10 +1,9 @@
 import { Link } from "expo-router";
-import { TouchableOpacity } from "react-native";
+import { Pressable, TouchableOpacity } from "react-native";
 
 export default function LoginButton() {
-    return <Link href="/login" className="text-white text-lg font-semibold">Login</Link>
-
-    //  <TouchableOpacity>
-    //     <Link href="/login" className="text-white text-lg font-semibold">Login</Link>
-    // </TouchableOpacity>
+    function onPress() {
+        console.log("Login Button Pressed");
+    }
+    return <Link href="/login" className="mr-6 text-white text-lg font-semibold">Login</Link>
 }
