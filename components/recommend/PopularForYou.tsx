@@ -57,8 +57,7 @@ export default function RecommendForYou() {
   ]);
   return (
     <View className="py-8 bg-white gap-2">
-      <Text className="p-2 px-4 text-3xl">为您推荐</Text>
-      {/* horizontal scroll, do not show scrollbar, add propriate padding when scroll to right */}
+      <Text className="p-2 px-4 text-3xl font-bold">热门 Full Stack Web Developers</Text>
       <ScrollView
         horizontal
         className="gap-2"

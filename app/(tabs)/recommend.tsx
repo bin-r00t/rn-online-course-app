@@ -4,7 +4,7 @@ import Icon from "@expo/vector-icons/Ionicons";
 import SuitableCourses from "@/components/recommend/SuitableCourses";
 import StudySessions from "@/components/recommend/StudySessions";
 import RecommendForYou from "@/components/recommend/RecommendForYou";
-
+import PopularForYou from "@/components/recommend/PopularForYou";
 export default function Recommend() {
   const onCloseHint = () => {
     console.log("close hint");
@@ -23,6 +23,7 @@ export default function Recommend() {
       <SuitableCourses />
       <StudySessions />
       <RecommendForYou />
+      <PopularForYou />
     </ScrollView>
   );
 }

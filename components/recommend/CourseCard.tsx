@@ -8,7 +8,8 @@ type CourseCardProps = {
   tutor: string;
   rate: number;
   rateCount: number;
-  enrollStatus: string;
+  enrollStatus: string | null;
+  category: string;
 };
 
 export default function CourseCard({
@@ -19,14 +20,22 @@ export default function CourseCard({
   rate,
   rateCount,
   enrollStatus,
+  category,
 }: CourseCardProps) {
   return (
-    <View className="ml-4 rounded-lg overflow-hidden gap-2">
+    <View className="w-72 rounded-lg overflow-hidden gap-2">
       <ImageBackground
         source={{ uri: thumbnail }}
-        className="w-72 h-40"
+        className="w-full h-40"
       ></ImageBackground>
-      <Text className="text-xl font-bold">{title}</Text>
+      {/* 标题太长，折行展示 */}
+      <Text
+        className="text-xl font-bold"
+        numberOfLines={2}
+        ellipsizeMode="tail"
+      >
+        {title}
+      </Text>
       <Text className="text-sm text-gray-500">{tutor}</Text>
       <View className="flex-row items-center gap-2">
         <Text className="text-bold text-orange-500">{rate}</Text>
@@ -34,7 +43,15 @@ export default function CourseCard({
         <Text className="text-sm text-gray-500">({rateCount})</Text>
       </View>
       <View className="flex-row items-center gap-2">
-        <Text className="font-extrabold text-xl text-gray-500">{enrollStatus}</Text>
+        {enrollStatus ? (
+          <Text className="font-extrabold text-xl text-slate-500">
+            {enrollStatus}
+          </Text>
+        ) : (
+          <Text className="font-extrabold text-xl text-gray-800">
+            {category}
+          </Text>
+        )}
       </View>
     </View>
   );
